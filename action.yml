@@ -1,0 +1,15 @@
+name: 'ssh'
+description: ''
+author: ''
+inputs:
+  ssh-private-key:
+    description: "ssh private key"
+    required: true
+branding:
+  icon: 'box'
+  color: 'green'
+runs:
+  using: 'docker'
+  image: 'Dockerfile'
+  args:
+    - ${{ inputs.ssh-private-key }}
