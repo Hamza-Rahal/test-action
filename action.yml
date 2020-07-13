@@ -5,6 +5,16 @@ inputs:
   ssh-private-key:
     description: "ssh private key"
     required: true
+  source:
+    description: "source"
+    required: true
+  host:
+    description: "host"
+    required: true
+  target:
+    description: "target"
+    required: true
+    default: "~"
 branding:
   icon: 'box'
   color: 'green'
@@ -13,3 +23,6 @@ runs:
   image: 'Dockerfile'
   args:
     - ${{ inputs.ssh-private-key }}
+    - ${{ inputs.source }}
+    - ${{ inputs.host }}
+    - ${{ inputs.target }}
