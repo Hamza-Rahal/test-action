@@ -2,7 +2,7 @@ name: 'ssh'
 description: ''
 author: ''
 inputs:
-  ssh-private-key:
+  key:
     description: "ssh private key"
     required: true
   source:
